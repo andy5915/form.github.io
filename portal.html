@@ -10,7 +10,47 @@
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
     <title>網動廣告科技</title>
+    <style>
+        .header {
+            height: 100vw;
+            background-image: url(https://images.unsplash.com/photo-1525536442945-13bd56f1f3ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98fdff8bd301f22bf90116eea6f89ac4&auto=format&fit=crop&w=1350&q=80);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
 
+        [draggable="true"] {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        #drag-drop-basic {
+            display: flex;
+        }
+
+        #drag-drop-basic #source-container {
+            height: 200px;
+            border: 2px solid #ccc;
+            flex: 1;
+            z-index: 1000;
+        }
+
+        #drag-drop-basic #target-container {
+            height: 200px;
+            border: 2px solid #ccc;
+            flex: 1;
+            z-index: 1020;
+        }
+
+        #drag-drop-basic #drag-source #drag-source2 {
+            width: 50px;
+            height: 50px;
+            /* border-radius: 50%; */
+            background-color: steelblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,73 +58,66 @@
     <div class="container-fluid">
 
         <div id="drag-drop-basic" class="row">
-            <div id="source-container" data-role="drag-drop-container" class="col-md-3 sticky-top">
-                <h1 class="text-red">拖曳版面配置</h1>
+            <div id="source-container" data-role="drag-drop-container" class="col-sm-2 sticky-top">
+                <h3 class="text-danger">拖曳版面配置</h3>
                 <div class="row ">
-                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-md-6">1/2區</div>
-                    <div id="drag-source2" draggable="true" class=" border border-dark  btn-warning text-center col-md-6 ">1/2區</div>
-                    <div id="drag-source3" draggable="true" class="  border border-dark  btn-warning text-center col-md-3 ">1/4區</div>
-                    <div id="drag-source4" draggable="true" class=" border border-dark  btn-warning text-center col-md-3">1/4區</div>
-                    <div id="drag-source5" draggable="true" class="  border border-dark  btn-warning text-center col-md-3">1/4區</div>
-                    <div id="drag-source6" draggable="true" class=" border border-dark  btn-warning text-center col-md-3">1/4區</div>
-                    <div id="drag-source7" draggable="true" class="  border border-dark  btn-warning text-center col-md-4">1/3區</div>
-                    <div id="drag-source8" draggable="true" class=" border border-dark  btn-warning text-center col-md-8">2/3區</div>
-                    <div id="drag-source9" draggable="true" class="  border border-dark  btn-warning text-center col-md-4">1/3區</div>
-                    <div id="drag-source10" draggable="true" class=" border border-dark  btn-warning text-center col-md-4">1/3區</div>
-                    <div id="drag-source11" draggable="true" class=" border border-dark  btn-warning text-center col-md-4">1/3區</div>
-                    <div id="drag-source12" draggable="true" class=" border border-dark  btn-warning text-center col-md-4">1/3區</div>
-                    <div id="drag-source13" draggable="true" class=" border border-dark  btn-warning text-center col-md-12">全區</div>
-                    <div id="drag-source14" draggable="true" class=" border border-dark  btn-warning text-center col-md-12">全區</div>
-                    <div id="drag-source15" draggable="true" class=" border border-dark  btn-warning text-center col-md-4">1/3區
-                        <img src="edm.png" alt="edm" class="card-img-top"> </div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+                    <div id="drag-source" draggable="true" class="  border border-dark  btn-warning text-center col-sm">Content Page</div>
+
+                    <div id="drag-source15" draggable="true" class=" border border-dark  btn-warning text-center col-sm">Content
+                        <img src="edm.png" alt="edm" class="col-xs"> </div>
                 </div>
             </div>
 
-            <div class="col-md-9 bg-danger py-2">
+            <div class="col-sm-10 bg-secondary py-2">
 
-                <h3 class="bg-dark text-light text-center  sticky-top px-2">配置區
+                <h3 class="bg-success border border-danger text-light text-center  sticky-top px-2">配置區
                     <span style="float:right;font-size: 18px;">請新增一列</span>
                 </h3>
                 <div class=" py-1 px-4 border border-dark" style="background-color:rgba(153, 245, 174, 0.8);">
                     <div class="text-center">
-                        <h3>Title Text....</h3>
+                        <h3>Title Text....
+                            <span class=" border border-danger" style="float:right;font-size: 18px;">編輯區</span>
+                        </h3>
                     </div>
-                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger py-2 px-2 clear:both;">
-                    </div>
-                </div>
-                <div class=" py-1 px-4 border border-dark" style="background-color:rgba(153, 245, 174, 0.8);">
-                    <div class="text-center">
-                        <h3>Title Text....</h3>
-                    </div>
-                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger py-2 px-2 clear:both;">
+                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger pl-5 ">
                     </div>
                 </div>
                 <div class=" py-1 px-4 border border-dark" style="background-color:rgba(153, 245, 174, 0.8);">
                     <div class="text-center">
-                        <h3>Title Text....</h3>
+                        <h3>Title Text....
+                            <span class=" border border-danger" style="float:right;font-size: 18px;">編輯區</span>
+                        </h3>
                     </div>
-                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger py-2 px-2 clear:both;">
-                    </div>
-                </div>
-                <div class=" py-1 px-4 border border-dark" style="background-color:rgba(153, 245, 174, 0.8);">
-                    <div class="text-center">
-                        <h3>Title Text....</h3>
-                    </div>
-                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger py-2 px-2 clear:both;">
+                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger pl-5 ">
                     </div>
                 </div>
                 <div class=" py-1 px-4 border border-dark" style="background-color:rgba(153, 245, 174, 0.8);">
                     <div class="text-center">
-                        <h3>Title Text....</h3>
+                        <h3>Title Text....
+                            <span class=" border border-danger" style="float:right;font-size: 18px;">編輯區</span>
+                        </h3>
                     </div>
-                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger py-2 px-2 clear:both;">
+                    <div id="target-container" data-role="drag-drop-container" class="row bg-success border border-danger pl-5 ">
                     </div>
                 </div>
-                
+
+
+
             </div>
         </div>
     </div>
     </div>
+    <br>
 
     <br>
 
@@ -128,7 +161,7 @@
             // execute function only when target container is different from source container
             if (this.id !== sourceContainerId) {
                 cancelDefault(e)
-                let id = e.dataTransfer.getData('text/plain', 'Data to Drag')
+                let id = e.dataTransfer.getData('text/plain', 'copy', 'Data to Drag')
                 e.target.appendChild(document.querySelector('#' + id))
             }
         }
@@ -140,44 +173,6 @@
 
 
 
-<style>
-    .header {
-        height: 100vw;
-        background-image: url(https://images.unsplash.com/photo-1525536442945-13bd56f1f3ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98fdff8bd301f22bf90116eea6f89ac4&auto=format&fit=crop&w=1350&q=80);
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-    }
 
-    [draggable="true"] {
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-
-    #drag-drop-basic {
-        display: flex;
-    }
-
-    #drag-drop-basic #source-container {
-        height: 200px;
-        border: 2px solid #ccc;
-        flex: 1;
-    }
-
-    #drag-drop-basic #target-container {
-        height: 200px;
-        border: 2px solid #ccc;
-        flex: 1;
-    }
-
-    #drag-drop-basic #drag-source #drag-source2 {
-        width: 100px;
-        height: 100px;
-        /* border-radius: 50%; */
-        background-color: steelblue;
-    }
-</style>
 
 </html>
