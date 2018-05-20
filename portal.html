@@ -161,7 +161,7 @@
             // execute function only when target container is different from source container
             if (this.id !== sourceContainerId) {
                 cancelDefault(e)
-                let id = e.dataTransfer.getData('text/plain', 'copy', 'Data to Drag')
+                let id = e.dataTransfer.getData('text/plain', 'Data to Drag')
                 e.target.appendChild(document.querySelector('#' + id))
             }
         }
